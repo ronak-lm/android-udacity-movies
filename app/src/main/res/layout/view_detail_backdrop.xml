@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView android:id="@+id/backdrop_image_default"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/detail_button_height"
+        android:src="@drawable/default_backdrop"
+        android:scaleType="fitCenter"
+        android:background="@color/default_image_background"
+        android:visibility="gone"
+        tools:ignore="contentDescription"/>
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/backdrop_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@color/default_image_background" />
+
+    <FrameLayout android:id="@+id/backdrop_play_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView android:src="@drawable/button_play"
+            android:layout_width="@dimen/detail_play_button_size"
+            android:layout_height="@dimen/detail_play_button_size"
+            android:layout_marginBottom="@dimen/very_large_margin"
+            android:layout_gravity="center"
+            tools:ignore="contentDescription"/>
+
+    </FrameLayout>
+
+</FrameLayout>

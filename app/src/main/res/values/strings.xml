@@ -1,0 +1,49 @@
+<resources>
+    <!-- App Title -->
+    <string name="app_name">Watchlist</string>
+
+    <!-- SharedPreference Keys -->
+    <string name="settings_last_selection">drawer_last_page</string>
+    <string name="settings_thumbnail_image_width">thumbnail_image_width</string>
+
+    <!-- List For Navigation Drawer -->
+    <string name="drawer_popular">Most Popular</string>
+    <string name="drawer_rated">Top Rated</string>
+    <string name="drawer_upcoming">Upcoming</string>
+    <string name="drawer_playing">Now Playing</string>
+    <string name="drawer_favorite">Favorites</string>
+
+    <!-- Toolbar actions -->
+    <string name="action_search">Search</string>
+    <string name="action_share">Share</string>
+    <string name="action_share_text">Check out</string>
+    <string name="action_share_using">Share using&#8230;</string>
+
+    <!-- Loading and Error Message -->
+    <string name="server_unreachable">Oops! Something went wrong.\nPlease check your internet connection.</string>
+    <string name="try_again">Try again?</string>
+    <string name="loading">Loading&#8230;</string>
+
+    <!-- Movie Detail Activity -->
+    <string name="detail_header_overview">OVERVIEW</string>
+    <string name="detail_button_photos">PHOTOS</string>
+    <string name="detail_button_videos">VIDEOS</string>
+    <string name="detail_button_reviews">REVIEWS</string>
+    <string name="detail_header_crew">CREW</string>
+    <string name="detail_header_cast">CAST</string>
+    <string name="detail_button_see_all">SEE ALL</string>
+
+    <!-- Reviews Activity -->
+    <string name="reviews_title">Reviews</string>
+    <string name="reviews_no_results">We don\'t have any reviews for\nthis movie!</string>
+
+    <!-- Videos Activity -->
+    <string name="videos_title">Videos</string>
+    <string name="videos_no_results">We don\'t have any videos for\nthis movie!</string>
+
+    <!-- Favorites -->
+    <string name="favorite_added">Added to favorites</string>
+    <string name="favorite_removed">Removed from favorites</string>
+    <string name="favorite_no_movies">No Favorite Movies</string>
+
+</resources>

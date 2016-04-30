@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_card"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/movie_detail_card_height"
+    android:layout_margin="@dimen/movie_card_margin"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    cardview:cardBackgroundColor="@color/card_background"
+    cardview:cardPreventCornerOverlap="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Movie poster -->
+        <FrameLayout android:id="@+id/movie_poster_holder"
+            android:layout_width="@dimen/movie_detail_poster_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <!-- Default image to display if poster is not found -->
+            <ImageView android:id="@+id/movie_poster_default"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/default_poster"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+
+            <!-- Poster image -->
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/default_image_background"
+                android:scaleType="centerCrop"/>
+
+        </FrameLayout>
+
+        <!-- Movie title and rating -->
+        <TextView android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:layout_toRightOf="@+id/movie_poster_holder"
+            android:layout_toEndOf="@+id/movie_poster_holder"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="@dimen/movie_detail_title_textSize"
+            android:textColor="@color/text_primary"
+            tools:text="My Awesome Movie Title"/>
+
+        <!-- Movie release year and overview -->
+        <LinearLayout android:id="@+id/movie_detail_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/movie_rating_holder"
+            android:layout_below="@+id/movie_title"
+            android:layout_toRightOf="@+id/movie_poster_holder"
+            android:layout_toEndOf="@+id/movie_poster_holder"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:orientation="vertical">
+
+            <TextView android:id="@id/movie_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/movie_detail_year_textSize"
+                tools:text="2015"/>
+
+            <com.ronakmanglani.watchlist.widget.AutoResizeTextView
+                android:id="@+id/movie_overview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/small_margin"
+                android:textSize="@dimen/movie_detail_overview_textSize"
+                android:ellipsize="end"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus turpis ac sem varius pretium. Nam vitae mauris augue."/>
+
+        </LinearLayout>
+
+        <!-- Movie Rating -->
+        <RelativeLayout android:id="@+id/movie_rating_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/movie_poster_holder"
+            android:layout_toEndOf="@+id/movie_poster_holder"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:layout_marginBottom="@dimen/medium_margin">
+
+            <TextView android:id="@+id/movie_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/rating_icon"
+                android:layout_toStartOf="@+id/rating_icon"
+                android:layout_marginRight="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/movie_year_fontSize"
+                android:maxLines="@integer/movie_year_maxLines"
+                tools:text="8.76"/>
+
+            <ImageView android:id="@+id/rating_icon"
+                android:layout_width="@dimen/movie_rating_icon_size"
+                android:layout_height="@dimen/movie_rating_icon_size"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/icon_star"
+                android:scaleType="fitCenter"
+                tools:ignore="contentDescription"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Theme Colors -->
+    <color name="primary">#ED1C24</color>
+    <color name="primary_dark">#D21822</color>
+    <color name="accent">#4CAF50</color>
+    <color name="background">#eeeeee</color>
+    <color name="foreground">#616161</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#FFFFFF</color>
+    <color name="text_chrome">@color/foreground</color>
+
+    <!-- Other Colors -->
+    <color name="default_image_background">#d8d8d8</color>
+    <color name="card_background">#fafafa</color>
+    <color name="button_background">#c8000000</color>
+    <color name="separator">#9e9e9e</color>
+
+</resources>
